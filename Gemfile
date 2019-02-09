@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 # Using Webpacker
 gem 'webpacker'
 
+# Using Dotenv
+gem 'dotenv-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
