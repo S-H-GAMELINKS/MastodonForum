@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
      private
         def set_post
-            @topic = Topic.find(params[:post_id])
+            @topic = Topic.find(params[:topic_id])
         end
 
          def comments_params
