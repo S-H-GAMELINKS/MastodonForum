@@ -16,5 +16,10 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require select2
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $('select#topic_category').select2();
+});
