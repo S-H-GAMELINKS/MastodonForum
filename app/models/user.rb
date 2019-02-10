@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 
+  def profile_url
+    "#{self.email.gsub!(/^.+@/, "")}/@#{self.uid.gsub!(/@.+/, "")}"
+  end
 
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
