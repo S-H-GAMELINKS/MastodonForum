@@ -10,6 +10,11 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to 'Topics', topics_path, class: "dropdown-item" %>
         <%= link_to 'Category', categories_path, class: "dropdown-item" %>
+        <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "dropdown-item"%>
+        <% else %>
+        <%= link_to 'Sign In', user_mastodon_omniauth_authorize_path, class: "dropdown-item"%>
+        <% end %>
       </div>
     </div>
 </nav>
