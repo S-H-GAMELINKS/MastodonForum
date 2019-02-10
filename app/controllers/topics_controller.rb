@@ -20,6 +20,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /topics
