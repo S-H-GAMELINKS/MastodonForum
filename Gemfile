@@ -42,6 +42,9 @@ gem 'jquery-rails'
 # Using Devise
 gem 'devise'
 
+# Using Select2
+gem 'select2-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
