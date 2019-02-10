@@ -15,10 +15,12 @@ class TopicsController < ApplicationController
   # GET /topics/new
   def new
     @topic = Topic.new
+    @categories = Category.all
   end
 
   # GET /topics/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /topics
@@ -69,6 +71,6 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :content)
+      params.require(:topic).permit(:title, :content, :category)
     end
 end
