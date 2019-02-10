@@ -10,5 +10,12 @@
   <%= @topic.content %>
 </p>
 
+<h2>Comments</h2>
+  <div id="comments">
+    <%= render @topic.comments %>
+  </div>
+
+<%= render 'comments/new', topic: @topic %> 
+
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
