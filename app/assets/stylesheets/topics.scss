@@ -1,3 +1,14 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.form-left{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.form-right{
+    width: 50%;
+    float: right;
+    padding: 20px;
+}

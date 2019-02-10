@@ -1,33 +1,42 @@
-<%= form_with(model: topic, local: true) do |form| %>
-  <% if topic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+<div  data-controller="topic">
+  <div class="form-left">
+    <%= form_with(model: topic, local: true) do |form| %>
+      <% if topic.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
 
-      <ul>
-      <% topic.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% topic.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
+
+      <div class="field">
+        <%= form.label :category %>
+        <%= form.collection_select(:category, @categories, :name, :name, include_blank: true) %>
+      </div>
+
+      <div class="field">
+        <%= form.label :content %>
+        <%= form.hidden_field :content, id: :topic_text %>
+        <trix-editor input="topic_text"  data-target="topic.content", data-action="input->topic#content"></trix-editor>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.collection_select(:category, @categories, :name, :name, include_blank: true) %>
+  <div class="form-right">
+    <h1>Content</h1>
+    <div data-target="topic.preview"></div>
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.hidden_field :content, id: :topic_text %>
-    <trix-editor input="topic_text"></trix-editor>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
