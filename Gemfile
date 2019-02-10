@@ -32,6 +32,9 @@ gem 'webpacker'
 # Using Dotenv
 gem 'dotenv-rails'
 
+# Using Trix
+gem 'trix'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
