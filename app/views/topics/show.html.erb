@@ -17,8 +17,10 @@
 
 <h2>Comments</h2>
   <div id="comments">
-    <%= render @topic.comments %>
+    <%= render @comments %>
   </div>
+
+  <%= paginate @comments %>
 
 <%= render 'comments/new', topic: @topic %> 
 

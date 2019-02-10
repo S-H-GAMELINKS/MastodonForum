@@ -13,6 +13,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @comments = Comment.where(:topic_id => params[:id]).page(params[:page]).per(PER)
   end
 
   # GET /topics/new
