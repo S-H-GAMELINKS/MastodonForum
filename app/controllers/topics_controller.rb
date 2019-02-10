@@ -1,10 +1,13 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
+  # kaminari per
+  PER = 10
+
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.page(params[:page]).per(PER)
   end
 
   # GET /topics/1
