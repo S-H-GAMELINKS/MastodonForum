@@ -1,10 +1,13 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
+  # kaminari per
+  PER = 10
+
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.page(params[:page]).per(PER)
   end
 
   # GET /categories/1
