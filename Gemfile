@@ -45,6 +45,11 @@ gem 'devise'
 # Using Select2
 gem 'select2-rails'
 
+# Using Mastodon API
+gem 'mastodon-api', require: 'mastodon'
+gem 'omniauth-mastodon'
+gem 'omniauth'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
