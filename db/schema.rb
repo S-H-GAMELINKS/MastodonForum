@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_045056) do
+ActiveRecord::Schema.define(version: 2019_02_10_045148) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2019_02_10_045056) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_comments_on_topic_id"
+  end
+
+  create_table "mastodon_clients", force: :cascade do |t|
+    t.string "domain"
+    t.string "client_id"
+    t.string "client_secret"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "topics", force: :cascade do |t|
