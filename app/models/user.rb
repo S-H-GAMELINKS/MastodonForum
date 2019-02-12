@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
     if user != nil then
       user.update!(name: auth.extra.raw_info.display_name)
+      user.update!(icon: icon: auth.extra.raw_info.avatar)
     end
       
     unless user
@@ -22,6 +23,7 @@ class User < ApplicationRecord
         provider: auth.provider,
         email:    User.dummy_email(auth),
         password: Devise.friendly_token[0, 20]
+        icon:     auth.extra.raw_info.avatar
       )
       user.save!
     end
