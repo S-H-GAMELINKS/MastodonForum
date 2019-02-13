@@ -27,5 +27,7 @@
 
 <%= render 'comments/new', topic: @topic %> 
 
+<% if user_signed_in? && @topic.user_id == current_user.id %>
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
+<% end %>
 <%= link_to 'Back', topics_path %>
