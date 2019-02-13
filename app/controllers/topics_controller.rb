@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit]
 
   # kaminari per
   PER = 10
@@ -72,6 +73,12 @@ class TopicsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_topic
       @topic = Topic.find(params[:id])
+    end
+
+    def check_user
+      if !user_signed_in?
+        redirect_to :root
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
