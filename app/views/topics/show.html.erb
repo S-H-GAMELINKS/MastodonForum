@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= User.find(@topic.user_id).name %>
+<%= image_tag(User.find(@topic.user_id).icon, :size => "40x40")%>
+
 <p>
   <strong>Title:</strong>
   <%= @topic.title %>

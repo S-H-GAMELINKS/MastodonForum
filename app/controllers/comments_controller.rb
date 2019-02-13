@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
     def create
         @topic.comments.create! comments_params
+        @topic.comments.update(:user_id => current_user.id)
         redirect_to @topic
     end
 
