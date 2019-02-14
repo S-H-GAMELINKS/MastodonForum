@@ -1,24 +1,8 @@
-# README
+# MastodonForum
+## 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mastodonの運用・保守、アップデートなどの相談ができるWebアプリです
+必要なものは、クライアントキーとクライアントシークレットです
 
-Things you may want to cover:
+あとは、リダイレクト先のURLを`https://hogehoge/users/auth/mastodon/callback`のようにするだけです
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
