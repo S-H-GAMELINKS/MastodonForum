@@ -9,3 +9,7 @@ Mastodonの運用・保守、アップデートなどの相談ができるWebア
 ## デプロイ
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## ライセンス
+
+[MIT](./LICENSE)
