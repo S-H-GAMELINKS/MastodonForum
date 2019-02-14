@@ -1,0 +1,26 @@
+{
+    "name": "Mastodon Forum",
+    "description": "Mastodon Forum Web Application",
+    "website": "https://github.com/S-H-GAMELINKS/MastodonForum",
+    "repository": "https://github.com/S-H-GAMELINKS/MastodonForum",
+    "env": {
+      "MASTODON_ACCESS_KEY": {
+        "description": "Add Mastodon Client Key",
+        "value": ""
+      },
+      "MASTODON_SECRET_KEY": {
+        "description": "Add Mastodon Client Secret",
+        "value": ""
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "heroku/ruby"
+      }
+    ],
+    "logo": "https://small-sharp-tool.com/logo.svg",
+    "success_url": "/"
+  }
