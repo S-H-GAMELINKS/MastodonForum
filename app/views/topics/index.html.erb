@@ -19,7 +19,7 @@
         <td><%= topic.category %></td>
         <td><%= sanitize topic.content, tags: %w(h1 h2 h3 h4 h5 h6 ul ol li p a img table tr td em br strong div), attributes:  %w(id class href) %></td>
         <td><%= link_to 'Show', topic %></td>
-        <% if user_signed_in? && topic.user_id == currenr_user.id %>
+        <% if user_signed_in? && topic.user_id == current_user.id %>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
