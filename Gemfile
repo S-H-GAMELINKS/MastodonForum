@@ -53,6 +53,9 @@ gem 'omniauth'
 # Using Kaminari
 gem 'kaminari'
 
+# Using Ransack
+gem 'ransack'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
